@@ -3,6 +3,8 @@ bin/
 obj/
 .vs/
 node_modules/
-wwwroot/app/**/*.js
-wwwroot/css/**/*.css
+**/wwwroot/app/**/*.js
+**/wwwroot/css/**/site.css
+typings/
+**/project.lock.json
 

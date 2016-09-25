@@ -1,0 +1,264 @@
+﻿
+@validation-red: #ff8080;
+@validation-blue: #76ABD9;
+@white: #fff;
+@main-blue: #3c5977;
+@odd-line-color: #f9f9f9;
+@font-color: #73879C;
+@table-hover-color: #eef2f6;
+@btn-background: #428bca;
+@btn-color: #357ebd;
+@btn-hover-background: #3276b1;
+@btn-hover-color: #285e8e;
+@gray-border: #ccc;
+@label-font-size : 90%;
+
+html{
+    height: 100%; 
+}
+
+.k-header>.k-grid-filter { 
+    float: left; 
+    padding-right: 5px;
+}
+
+/*table selected page number*/
+.k-state-selected{
+    background-color : @main-blue;
+    border-color : @main-blue;
+    color : @white;
+}
+
+/*table header font color*/
+.k-header, .k-treemap-title, .k-grid-header .k-header>.k-link {
+    color: @font-color;
+    font-weight: bold;
+    background: @white;
+}
+
+/*table font color*/
+.k-block, .k-widget, .k-popup, .k-content, .k-toolbar, .k-dropdown .k-input {
+    color : @font-color;
+}
+
+/*table header border removed*/
+.k-grid-header th.k-header, .k-filter-row th {
+    border-left-width: 0;
+    border-bottom-width: 0;
+}
+
+/*table cell borders removed*/
+.k-grid td{
+    border-left-width: 0;
+    border-top: 1px;
+}
+
+.k-filter-row th{
+    border-left-width: 0;
+    border-top: 1px;
+    border-style: solid;
+    border-color: #ccc;
+}
+
+/*background on odd rows*/
+.k-alt {
+    background-color: @odd-line-color;
+}
+
+/*table borders removed*/
+.k-widget, .k-block, .k-inline-block, .k-draghandle{
+    border-left-width: 0;
+    border-right-width: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: @white;
+}
+
+.k-link:link, .k-link:visited, .k-nav-current.k-state-hover .k-link, .k-pager-wrap .k-link:hover{
+    color : @font-color;
+}
+
+/*table hover*/
+.k-grid.k-widget tr:hover {
+    background: @table-hover-color;
+}
+
+.btn{
+    font-size: 12px;
+    min-width: 70px;
+}
+
+.main_menu_side{
+    margin-top: 20px;
+}
+
+/*align morf icon*/
+.main-icon{
+    width: 55px; 
+    height: 55px;
+    margin-left: 7px;
+    margin-top: 5px;
+}
+
+/*align button*/
+.btn-right{
+     margin-right: 0;
+}
+
+.btn-right-align{
+    margin-right: 31px;
+}
+
+/*validation colors*/
+.form-group{
+    .form-control.ng-valid:focus, .form-control.ng-pristine:focus{
+        border-color: @validation-blue;
+        box-shadow: 0 0 7px 0 @validation-blue !important;
+    }
+    .form-control.ng-invalid.ng-dirty:focus{
+        box-shadow: 0 0 7px 0 @validation-red !important;
+    }
+    .form-control.ng-invalid.ng-dirty{
+        border-color: @validation-red;
+    }
+}
+
+.ng-submitted .form-group{
+    .form-control.ng-invalid{
+        border-color: @validation-red;
+    }
+    .form-control.ng-invalid:focus{
+        box-shadow: 0 0 7px 0 @validation-red !important;
+    }  
+}
+
+.container-left{
+    margin-right: 20px;
+}
+
+.button-down{
+    margin-bottom: 10px;
+}
+
+.btn-lower{
+    margin-top: 5px;
+}
+
+.unpadded{
+    padding: 0;
+}
+
+.first-sub-container{
+    padding-left: 0;
+}
+
+.last-sub-container{
+    padding-right: 0;
+}
+
+.legend-right{
+    margin-left: 0;
+}
+
+/*Table filters*/
+.k-textbox:hover, .k-autocomplete.k-state-hover, .k-picker-wrap.k-state-hover, .k-numeric-wrap.k-state-hover, .k-dropdown-wrap.k-state-hover {
+    background-color: @white;
+}
+
+.k-dropdown{
+    .k-state-hover{
+        border-color: @gray-border;
+        .k-input{
+        color: @font-color;
+        }
+    }
+    .k-state-hover.k-state-focused{
+        border-color: @validation-blue;
+    }
+    .k-state-focused .k-input{
+        color: @font-color;
+    }
+    .k-state-focused.k-state-active{
+        border-color: @validation-blue;
+        box-shadow: 0 0 7px 0 @validation-blue !important;
+    }
+} 
+
+.k-list{
+    .k-item.k-state-hover{
+        background-color: @btn-color !important;
+        color: @white !important;
+    } 
+    .k-item.k-state-selected{
+        background-color: @white;
+        color: @font-color;
+        border-color: @white;
+    }
+} 
+
+/*Filter input*/
+.k-filter-menu{
+    input.k-textbox:focus{
+        border-color: @validation-blue !important;
+        color: @font-color;
+    }
+    input.k-textbox{
+        color: @font-color;
+    }
+    input.k-textbox:hover{
+        color: @font-color;
+        border-color: @gray-border;
+    }
+} 
+
+/*Filter border*/
+.k-list-container.k-state-border-up{
+    border-color: @validation-blue;
+    border-top-color: @gray-border;
+}
+
+/*chrome autofill background removed*/
+input:-webkit-autofill, input:-webkit-autofill:focus, input:-webkit-autofill:active, input:-webkit-autofill:visited{
+    -webkit-text-fill-color: @font-color !important;
+    transition: background-color 5000s ease-in-out 0s !important;
+}
+
+.k-pager-wrap .k-pager-refresh{
+    background-color: @white;
+}
+
+/*.k-widget, .k-block, .k-inline-block, .k-draghandle{
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-radius: 3px;
+}*/
+
+.k-filter-row .k-filtercell .k-autocomplete, k-filter-row .k-filtercell span.k-state-hover{
+    border-left: 1px solid;
+    border-right: 1px solid;
+    border-radius: 3px;
+    border-color: @gray-border;
+    color: @font-color;
+}
+
+.k-filter-row .k-filtercell span.k-state-focused{
+    border-color: @validation-blue;
+}
+
+.k-input{
+    color: @font-color;    
+}
+
+.label-info, .label-success, .label-warning, .label-danger{
+    font-size: 90%;
+}
+
+.fa-warning.coloured {
+    color:#f0ad4e;
+}
+
+/*A temp fix for confirmation dialog positioning*/ 
+.ui-dialog {
+    top: 84px !important;
+    position: absolute; 
+}
