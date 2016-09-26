@@ -66,14 +66,18 @@ type Startup =
 
     member private this.SetupRouting(app: IApplicationBuilder, env:IHostingEnvironment) =
         let nodeModules = "node_modules"
-        let fileOptions = new StaticFileOptions(FileProvider = new PhysicalFileProvider(Path.Combine(env.ContentRootPath, nodeModules)), RequestPath = PathString(sprintf "/%s" nodeModules))        
-
+        let nodeModuleOptions = 
+            new StaticFileOptions(FileProvider = new PhysicalFileProvider(Path.Combine(env.ContentRootPath, nodeModules)), RequestPath = PathString(sprintf "/%s" nodeModules))        
+            
+        let wwwwrootOptions = 
+            new StaticFileOptions(FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), @"wwwroot")),RequestPath = new PathString("/wwwroot"))
         app
             .UseApplicationInsightsRequestTelemetry()
             .UseApplicationInsightsExceptionTelemetry()
             .UseDefaultFiles()
             .UseStaticFiles()
-            .UseStaticFiles(fileOptions)
+            .UseStaticFiles(nodeModuleOptions)
+            .UseStaticFiles(wwwwrootOptions)
             .UseMvc(
                 fun routes -> 
                 routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}") 
