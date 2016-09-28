@@ -1,0 +1,38 @@
+{
+  "version": "1.0.0",
+  "name": "Parking.Infrastructure",
+  "buildOptions": {
+    "debugType": "portable",
+    "emitEntryPoint": false,
+    "preserveCompilationContext": true,    
+    "compilerName": "fsc",
+    "compile": {
+      "includeFiles": [
+        "IMessage.fs",
+        "Event.fs",
+        "Command.fs",        
+        "IBus.fs",
+        "CommandHandler.fs",
+        "AggregateRoot.fs"
+      ]
+    }
+  },
+  "dependencies": {
+      "Microsoft.NETCore.App": {
+        "version": "1.0.1",
+        "type": "platform"
+      },
+      "Microsoft.FSharp.Core.netcore": "1.0.0-alpha-160629"
+  },  
+  "tools": {
+    "dotnet-compile-fsc": "1.0.0-preview2-*"
+  },
+  "frameworks": {
+    "netcoreapp1.0": {
+      "imports": [
+        "dotnet5.6",
+        "portable-net45+win8"
+      ]
+    }
+  }
+}
