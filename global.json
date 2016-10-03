@@ -1,0 +1,7 @@
+{
+    "projects":[
+		"Parking.Infrastructure",
+        "Parking.Domain",
+        "Parking.Web"
+    ]
+}

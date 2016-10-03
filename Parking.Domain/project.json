@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "name": "Parking.Infrastructure",
+  "name": "Parking.Domain",
   "buildOptions": {
     "debugType": "portable",
     "emitEntryPoint": false,
@@ -8,13 +8,13 @@
     "compilerName": "fsc",
     "compile": {
       "includeFiles": [
-        "FunctionChaining.fs",
-        "Messages.fs",
-        "AggregateRoot.fs"
+        "./Admin/AdminCommands.fs",
+        "./Admin/AdminDomain.fs"
       ]
     }
   },
   "dependencies": {
+      "Parking.Infrastructure": "1.0.0",
       "Microsoft.NETCore.App": {
         "version": "1.0.1",
         "type": "platform"

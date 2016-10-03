@@ -15,6 +15,7 @@
     }
   },
   "dependencies": {
+      "Parking.Domain":"1.0.0",    
       "Microsoft.NETCore.App": {
         "version": "1.0.1",
         "type": "platform"
