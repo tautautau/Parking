@@ -10,6 +10,7 @@
       "includeFiles": [
         "FunctionChaining.fs",
         "Messages.fs",
+        "WrappedString.fs",
         "AggregateRoot.fs"
       ]
     }

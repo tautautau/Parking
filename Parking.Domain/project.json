@@ -8,8 +8,8 @@
     "compilerName": "fsc",
     "compile": {
       "includeFiles": [
-        "./Admin/AdminCommands.fs",
-        "./Admin/AdminDomain.fs"
+        "./User/UserCommands.fs",
+        "./User/UserDomain.fs"
       ]
     }
   },
