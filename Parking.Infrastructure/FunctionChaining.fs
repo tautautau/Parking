@@ -65,3 +65,9 @@ module FunctionChaining =
         | Failure f1,Success _  -> Failure f1
         | Success _ ,Failure f2 -> Failure f2
         | Failure f1,Failure f2 -> Failure (addFailure f1 f2)
+
+    // adding validation functions
+    let (&&&) v1 v2 = 
+        let addSuccess r1 r2 = r1 // return first
+        let addFailure s1 s2 = s1 + "; " + s2  // concat
+        plus addSuccess addFailure v1 v2 

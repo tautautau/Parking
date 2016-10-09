@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "name": "Parking.Domain",
+  "name": "Parking.Querying",
   "buildOptions": {
     "debugType": "portable",
     "emitEntryPoint": false,
@@ -8,14 +8,12 @@
     "compilerName": "fsc",
     "compile": {
       "includeFiles": [
-        "./User/UserDomain.fs",
-        "./User/UserCommands.fs",
-        "./User/UserQueries.fs"
+        "./User/UserQuerying.fs"
       ]
     }
   },
   "dependencies": {
-      "Parking.Infrastructure": "1.0.0",
+      "Parking.Domain": "1.0.0",
       "Microsoft.NETCore.App": {
         "version": "1.0.1",
         "type": "platform"

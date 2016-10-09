@@ -1,4 +1,4 @@
-namespace Parking.Domain.Admin
+namespace Parking.Domain.User
 
 open System
 open Parking.Infrastructure.Messages
