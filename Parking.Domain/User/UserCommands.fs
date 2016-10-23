@@ -1,9 +1,11 @@
 namespace Parking.Domain.User
 
 open System
+
 open Parking.Infrastructure.Messages
+open Parking.Domain.User.UserDomain
 
 module UserCommands = 
-    type CreateUserCommand(name: String) =
+    type CreateBasicUserCommand(user: User.T) =
         inherit Command()        
-        member this.Name = name
+        member this.User = user

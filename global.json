@@ -2,6 +2,7 @@
     "projects":[
 		"Parking.Infrastructure",		
         "Parking.Domain",
+		"Parking.Persistance",
 		"Parking.Querying",
         "Parking.Web"
     ]

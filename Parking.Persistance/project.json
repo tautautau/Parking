@@ -1,0 +1,35 @@
+{
+  "version": "1.0.0",
+  "name": "Parking.Persistance",
+  "buildOptions": {
+    "debugType": "portable",
+    "emitEntryPoint": false,
+    "preserveCompilationContext": true,    
+    "compilerName": "fsc",
+    "compile": {
+      "includeFiles": [
+        "./User/UserCommandHandlers.fs"
+      ]
+    }
+  },
+  "dependencies": {
+      "Parking.Domain": "1.0.0",
+	    "Parking.Infrastructure": "1.0.0",
+      "Microsoft.NETCore.App": {
+        "version": "1.0.1",
+        "type": "platform"
+      },
+      "Microsoft.FSharp.Core.netcore": "1.0.0-alpha-160629"
+  },  
+  "tools": {
+    "dotnet-compile-fsc": "1.0.0-preview2-*"
+  },
+  "frameworks": {
+    "netcoreapp1.0": {
+      "imports": [
+        "dotnet5.6",
+        "portable-net45+win8"
+      ]
+    }
+  }
+}

@@ -14,6 +14,13 @@ module UserQuerying =
             Make= "Subaru";
             Model= "Impreza WRX"
         }
+    let car2 =
+        {
+            Id= Guid.NewGuid();
+            Plate= "NEJ526";
+            Make= "Honda";
+            Model= "Cvic"
+        }        
     let cars = [|car|]
     let userDto = 
         {
@@ -25,24 +32,23 @@ module UserQuerying =
             Car=cars;
         }
 
-    let users = [|userDto|]
-
-    type IAddingService =
-        abstract member Add: int
-
-    type MyAddingService() =
-        
-        interface IAddingService with 
-            member this.Add = 
-                55
+    let userDto2 = 
+        {
+            Id= Guid.NewGuid();
+            CognizantId= "654321";
+            Name= "Peter";
+            Surname= "Pen";
+            Email= "Peter.Pen@mail.com";
+            Car=cars;
+        }
+    let users = [|userDto; userDto2|]
 
 
     type UserReadFacade() =
-
-        //interface IUserReadFacade with 
-            member this.GetUserByCognizantId (cognizantId: CognizantId.T) = 
+        interface IUserReadFacade with
+            
+            member x.GetUserByCognizantId(arg1: CognizantId.T): UserDto = 
                 userDto
-                
-        //interface IUserReadFacade with 
-            member this.GetUsers =
-                users
+
+            member x.GetUsers: UserDto [] = 
+                users  
