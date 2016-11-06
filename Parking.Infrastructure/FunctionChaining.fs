@@ -1,4 +1,4 @@
-//Basis taken from: https://fsharpforfunandprofit.com/posts/recipe-part3/ 
+//Basis taken from: https://fsharpforfunandprofit.com/posts/recipe-part2/
 namespace Parking.Infrastructure
 
 module FunctionChaining = 

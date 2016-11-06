@@ -11,6 +11,8 @@ open Microsoft.Extensions.Logging
 open Microsoft.AspNetCore.Mvc
 open Microsoft.Extensions.FileProviders
 
+open Parking.Querying
+
 type Startup = 
     val private Configuration : IConfigurationRoot    
     new(env: IHostingEnvironment) =
@@ -33,9 +35,11 @@ type Startup =
     member this.ConfigureServices(services: IServiceCollection) =
         printfn "Configuring services..."
         services
-            .AddApplicationInsightsTelemetry(this.Configuration)
+            .AddApplicationInsightsTelemetry(this.Configuration)            
             .AddMvc() 
             |> ignore
+        
+        Bootstrap.Setup(services)
         
     member this.Configure(app: IApplicationBuilder, env:IHostingEnvironment, loggerFactory: ILoggerFactory) =
         printfn "Configuring app.."

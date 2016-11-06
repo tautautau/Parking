@@ -9,13 +9,16 @@
     "compile": {
       "includeFiles": [
         "./Controllers/HomeController.fs",
+        "./Controllers/UserController.fs",
         "Startup.fs",
         "Program.fs"
       ]
     }
   },
   "dependencies": {
-      "Parking.Domain":"1.0.0",    
+      "Parking.Infrastructure":"1.0.0",
+      "Parking.Domain":"1.0.0",
+      "Parking.Querying":"1.0.0",
       "Microsoft.NETCore.App": {
         "version": "1.0.1",
         "type": "platform"
